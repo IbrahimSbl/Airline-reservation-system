@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table" prefHeight="590.0" prefWidth="719.0">
+              <columns>
+                <TableColumn fx:id="fnum" prefWidth="108.0" text="FLIGHT_NUMBER" />
+                <TableColumn fx:id="arrcountry" prefWidth="120.0" text="ARRIVAL_COUNTRY" />
+                  <TableColumn fx:id="depcountry" prefWidth="137.0" text="DEPARTURE_COUNTRY" />
+                  <TableColumn fx:id="arrtime" prefWidth="103.0" text="ARRIVAL_TIME" />
+                  <TableColumn fx:id="deptime" prefWidth="120.0" text="DEPARTURE_TIME" />
+                  <TableColumn fx:id="duration" prefWidth="120.0" text="DURATION" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

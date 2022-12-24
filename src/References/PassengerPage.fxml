@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="825.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="125.0" prefWidth="825.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+		<children>
+            <TextField fx:id="depCountry" layoutX="164.0" layoutY="14.0" prefHeight="25.0" prefWidth="146.0" promptText="Departure Country" />
+            <TextField fx:id="arrCountry" layoutX="329.0" layoutY="14.0" prefHeight="25.0" prefWidth="146.0" promptText="Arrival Country" />
+            <TextField fx:id="year" layoutX="498.0" layoutY="14.0" prefHeight="25.0" prefWidth="43.0" promptText="YYYY" />
+            <TextField fx:id="month" layoutX="556.0" layoutY="14.0" prefHeight="25.0" prefWidth="43.0" promptText="MM" />
+            <TextField fx:id="day" layoutX="613.0" layoutY="14.0" prefHeight="25.0" prefWidth="43.0" promptText="DD" />
+            <Button fx:id="search" layoutX="243.0" layoutY="56.0" mnemonicParsing="false" onAction="#search" prefWidth="117.0" style="-fx-background-color: lightblue;" text="Search" />
+            <Button fx:id="reset" layoutX="482.0" layoutY="56.0" mnemonicParsing="false" onAction="#reset" prefWidth="117.0" style="-fx-background-color: lightblue;" text="Reset" />
+            <Label fx:id="alert" alignment="CENTER" layoutX="253.0" layoutY="93.0" prefHeight="17.0" prefWidth="336.0" textFill="#08b1ff" />
+         </children>
+      </AnchorPane>
+      <ScrollPane fx:id="scroll" layoutY="125.0" prefHeight="525.0" prefWidth="825.0" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="125.0">
+         <content>
+            <FlowPane fx:id="view" alignment="TOP_CENTER" prefHeight="17.0" prefWidth="825.0">
+               <children>
+                  <FlowPane prefHeight="201.0" prefWidth="754.0">
+                     <children>
+                        <ImageView fitHeight="201.0" fitWidth="228.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../images/passengerLogo.png" />
+                           </image>
+                        </ImageView>
+                        <FlowPane hgap="2.0" prefHeight="201.0" prefWidth="523.0" vgap="5.0">
+                           <children>
+                              <Label prefHeight="22.0" prefWidth="90.0" text="Flight_Id:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField />
+                              <Label layoutX="10.0" layoutY="12.0" prefHeight="22.0" prefWidth="90.0" text="Duration:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="100.0" layoutY="10.0" />
+                              <Label layoutX="253.0" layoutY="12.0" prefHeight="22.0" prefWidth="90.0" text="From:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="345.0" layoutY="10.0" />
+                              <Label layoutX="10.0" layoutY="42.0" prefHeight="22.0" prefWidth="90.0" text="Departure:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="102.0" layoutY="40.0" />
+                              <Label layoutX="253.0" layoutY="42.0" prefHeight="22.0" prefWidth="90.0" text="To:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="345.0" layoutY="40.0" />
+                              <Label layoutX="10.0" layoutY="72.0" prefHeight="22.0" prefWidth="90.0" text="Arrival:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="102.0" layoutY="70.0" />
+                              <AnchorPane prefHeight="119.0" prefWidth="522.0">
+                                 <children>
+                                    <FlowPane alignment="TOP_CENTER" layoutX="56.0" layoutY="8.0" orientation="VERTICAL" prefHeight="103.0" prefWidth="124.0" style="-fx-border-color: pink;" vgap="12.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="119.0" text="First Class" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="34.0" layoutY="10.0" prefHeight="18.0" prefWidth="121.0" text="124$" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="34.0" layoutY="28.0" prefHeight="18.0" prefWidth="120.0" text="10 seats remained" textFill="RED">
+                                             <font>
+                                                <Font name="Eras Light ITC" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="199.0" layoutY="8.0" prefHeight="103.0" prefWidth="124.0" style="-fx-border-color: pink;" vgap="12.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="119.0" text="Business Class" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="121.0" text="110$" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="120.0" text="30 seats remained" textFill="RED">
+                                             <font>
+                                                <Font name="Eras Light ITC" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="340.0" layoutY="8.0" prefHeight="103.0" prefWidth="124.0" style="-fx-border-color: pink;" vgap="12.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="119.0" text="Economy Class" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="121.0" text="90$" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="120.0" text="80 seats remained" textFill="RED">
+                                             <font>
+                                                <Font name="Eras Light ITC" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </FlowPane>
+                  <FlowPane layoutX="46.0" layoutY="10.0" prefHeight="201.0" prefWidth="754.0">
+                     <children>
+                        <ImageView fitHeight="201.0" fitWidth="228.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../images/passengerLogo.png" />
+                           </image>
+                        </ImageView>
+                        <FlowPane hgap="2.0" prefHeight="201.0" prefWidth="523.0" vgap="5.0">
+                           <children>
+                              <Label prefHeight="22.0" prefWidth="90.0" text="Flight_Id:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField />
+                              <Label layoutX="10.0" layoutY="12.0" prefHeight="22.0" prefWidth="90.0" text="Duration:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="100.0" layoutY="10.0" />
+                              <Label layoutX="253.0" layoutY="12.0" prefHeight="22.0" prefWidth="90.0" text="From:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="345.0" layoutY="10.0" />
+                              <Label layoutX="10.0" layoutY="42.0" prefHeight="22.0" prefWidth="90.0" text="Departure:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="102.0" layoutY="40.0" />
+                              <Label layoutX="253.0" layoutY="42.0" prefHeight="22.0" prefWidth="90.0" text="To:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="345.0" layoutY="40.0" />
+                              <Label layoutX="10.0" layoutY="72.0" prefHeight="22.0" prefWidth="90.0" text="Arrival:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="102.0" layoutY="70.0" />
+                              <AnchorPane prefHeight="119.0" prefWidth="522.0">
+                                 <children>
+                                    <FlowPane alignment="TOP_CENTER" layoutX="56.0" layoutY="8.0" orientation="VERTICAL" prefHeight="103.0" prefWidth="124.0" style="-fx-border-color: pink;" vgap="12.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="119.0" text="First Class" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="34.0" layoutY="10.0" prefHeight="18.0" prefWidth="121.0" text="124$" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="34.0" layoutY="28.0" prefHeight="18.0" prefWidth="120.0" text="10 seats remained" textFill="RED">
+                                             <font>
+                                                <Font name="Eras Light ITC" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="199.0" layoutY="8.0" prefHeight="103.0" prefWidth="124.0" style="-fx-border-color: pink;" vgap="12.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="119.0" text="Business Class" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="121.0" text="110$" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="120.0" text="30 seats remained" textFill="RED">
+                                             <font>
+                                                <Font name="Eras Light ITC" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="340.0" layoutY="8.0" prefHeight="103.0" prefWidth="124.0" style="-fx-border-color: pink;" vgap="12.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="119.0" text="Economy Class" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="121.0" text="90$" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="120.0" text="80 seats remained" textFill="RED">
+                                             <font>
+                                                <Font name="Eras Light ITC" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </FlowPane>
+                  <FlowPane layoutX="46.0" layoutY="219.0" prefHeight="201.0" prefWidth="754.0">
+                     <children>
+                        <ImageView fitHeight="201.0" fitWidth="228.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../images/passengerLogo.png" />
+                           </image>
+                        </ImageView>
+                        <FlowPane hgap="2.0" prefHeight="201.0" prefWidth="523.0" vgap="5.0">
+                           <children>
+                              <Label prefHeight="22.0" prefWidth="90.0" text="Flight_Id:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField />
+                              <Label layoutX="10.0" layoutY="12.0" prefHeight="22.0" prefWidth="90.0" text="Duration:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="100.0" layoutY="10.0" />
+                              <Label layoutX="253.0" layoutY="12.0" prefHeight="22.0" prefWidth="90.0" text="From:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="345.0" layoutY="10.0" />
+                              <Label layoutX="10.0" layoutY="42.0" prefHeight="22.0" prefWidth="90.0" text="Departure:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="102.0" layoutY="40.0" />
+                              <Label layoutX="253.0" layoutY="42.0" prefHeight="22.0" prefWidth="90.0" text="To:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="345.0" layoutY="40.0" />
+                              <Label layoutX="10.0" layoutY="72.0" prefHeight="22.0" prefWidth="90.0" text="Arrival:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="102.0" layoutY="70.0" />
+                              <AnchorPane prefHeight="119.0" prefWidth="522.0">
+                                 <children>
+                                    <FlowPane alignment="TOP_CENTER" layoutX="56.0" layoutY="8.0" orientation="VERTICAL" prefHeight="103.0" prefWidth="124.0" style="-fx-border-color: pink;" vgap="12.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="119.0" text="First Class" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="34.0" layoutY="10.0" prefHeight="18.0" prefWidth="121.0" text="124$" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="34.0" layoutY="28.0" prefHeight="18.0" prefWidth="120.0" text="10 seats remained" textFill="RED">
+                                             <font>
+                                                <Font name="Eras Light ITC" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="199.0" layoutY="8.0" prefHeight="103.0" prefWidth="124.0" style="-fx-border-color: pink;" vgap="12.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="119.0" text="Business Class" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="121.0" text="110$" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="120.0" text="30 seats remained" textFill="RED">
+                                             <font>
+                                                <Font name="Eras Light ITC" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="340.0" layoutY="8.0" prefHeight="103.0" prefWidth="124.0" style="-fx-border-color: pink;" vgap="12.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="119.0" text="Economy Class" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="121.0" text="90$" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="120.0" text="80 seats remained" textFill="RED">
+                                             <font>
+                                                <Font name="Eras Light ITC" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </FlowPane>
+                  <FlowPane layoutX="46.0" layoutY="428.0" prefHeight="201.0" prefWidth="754.0">
+                     <children>
+                        <ImageView fitHeight="201.0" fitWidth="228.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../images/passengerLogo.png" />
+                           </image>
+                        </ImageView>
+                        <FlowPane hgap="2.0" prefHeight="201.0" prefWidth="523.0" vgap="5.0">
+                           <children>
+                              <Label prefHeight="22.0" prefWidth="90.0" text="Flight_Id:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField />
+                              <Label layoutX="10.0" layoutY="12.0" prefHeight="22.0" prefWidth="90.0" text="Duration:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="100.0" layoutY="10.0" />
+                              <Label layoutX="253.0" layoutY="12.0" prefHeight="22.0" prefWidth="90.0" text="From:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="345.0" layoutY="10.0" />
+                              <Label layoutX="10.0" layoutY="42.0" prefHeight="22.0" prefWidth="90.0" text="Departure:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="102.0" layoutY="40.0" />
+                              <Label layoutX="253.0" layoutY="42.0" prefHeight="22.0" prefWidth="90.0" text="To:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="345.0" layoutY="40.0" />
+                              <Label layoutX="10.0" layoutY="72.0" prefHeight="22.0" prefWidth="90.0" text="Arrival:" textFill="#08b1ff">
+                                 <font>
+                                    <Font name="Georgia" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="102.0" layoutY="70.0" />
+                              <AnchorPane prefHeight="119.0" prefWidth="522.0">
+                                 <children>
+                                    <FlowPane alignment="TOP_CENTER" layoutX="56.0" layoutY="8.0" orientation="VERTICAL" prefHeight="103.0" prefWidth="124.0" style="-fx-border-color: pink;" vgap="12.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="119.0" text="First Class" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="34.0" layoutY="10.0" prefHeight="18.0" prefWidth="121.0" text="124$" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="34.0" layoutY="28.0" prefHeight="18.0" prefWidth="120.0" text="10 seats remained" textFill="RED">
+                                             <font>
+                                                <Font name="Eras Light ITC" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="199.0" layoutY="8.0" prefHeight="103.0" prefWidth="124.0" style="-fx-border-color: pink;" vgap="12.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="119.0" text="Business Class" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="121.0" text="110$" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="120.0" text="30 seats remained" textFill="RED">
+                                             <font>
+                                                <Font name="Eras Light ITC" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="340.0" layoutY="8.0" prefHeight="103.0" prefWidth="124.0" style="-fx-border-color: pink;" vgap="12.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="119.0" text="Economy Class" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="121.0" text="90$" textFill="#08b1ff">
+                                             <font>
+                                                <Font name="Elephant" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="18.0" prefWidth="120.0" text="80 seats remained" textFill="RED">
+                                             <font>
+                                                <Font name="Eras Light ITC" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </FlowPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </FlowPane>
+               </children>
+            </FlowPane>
+         </content>
+      </ScrollPane>
+      <Button mnemonicParsing="false" onAction="#profile" prefHeight="28.0" style="-fx-background-color: lightblue; -fx-background-radius: 10; -fx-border-radius: 10;" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="20.0">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/contact.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="779.0" layoutY="615.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: lightblue; -fx-background-radius: 10; -fx-border-radius: 10;" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="60.0">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
